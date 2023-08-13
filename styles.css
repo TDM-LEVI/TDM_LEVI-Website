@@ -603,4 +603,30 @@ html {
     height: 300px;
     width: 360px;
   }
+
+  .header-text .happy {
+    animation: fadeInFromBottom 2s ease-in-out;
+  }
+  
+  .header-text .seventeenth {
+    animation: roll-1 2s cubic-bezier(0.175, 0.885, 0.32, 1.275) 2s both,
+    fadeInFromBottom 2s ease-in-out;
+  }
+  
+  .header-text .birthday {
+    animation: fadeInFromBottom 2s ease-in-out;
+  }
+  
+  .you {
+    animation: fadeInFromBottom 2s ease-in-out;
+  }
+  
+  .header-text .person {
+    animation: roll 2s cubic-bezier(0.175, 0.885, 0.32, 1.275) 2s both,
+    fadeInFromBottom 2s ease-in-out;
+  }
+
+  .header-text .the {
+    margin-top: 10px;
+  }
 }
