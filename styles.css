@@ -1,0 +1,606 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto Slab';
+  background-color: black;
+  overflow-x: hidden; 
+}
+
+/* Apply the animations to each part of the header text */
+h3 {
+  font-size: 30px;
+  text-align: left;
+  padding-bottom: 25px;
+  margin-top: -25px;
+}
+
+
+/* Styling for the black content section */
+.black-content, .black-content-2 {
+  color: white; /* Text color in the content section */
+  position: relative; /* Add position relative to make sure the content stays below the header image */
+  z-index: 1; /* Add z-index to make the black content appear above the header image */
+  background-color: #1b1b1b;
+}
+
+.container-2 h3 {
+  padding-left: 100px;
+}
+
+.black-content-2 {
+  background-color: #111;
+}
+
+/* Styling for the container */
+.container, .container-2 {
+  display: flex;
+  margin: 0 auto;
+  text-align: left; /* Align the text to the left */
+  align-items: center;
+  line-height: 140%;
+}
+
+.img, .img-2{
+  height: 300px;
+  width: 430px;
+  margin: 140px 50px 140px 100px;
+}
+
+.container p , .container-2 p {
+  max-width: 500px;;
+  font-size: 16px;
+  font-family:  Roboto Slab;
+  font-weight: 300;
+  color: white;
+}
+
+.container-2 p {
+  margin: 0 0 0 100px;
+}
+
+/* Styling for the triple-image section */
+.black-content-3 {
+  color: white;
+}
+
+.black-content-3 .container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  
+}
+
+.black-content-3 .image-info {
+  text-align: center;
+  max-width: 325px;
+  margin: 80px 0 0 0;
+}
+
+.black-content-3 .triple-img {
+  height: 400px;
+  width: 300px;
+  object-fit: cover;
+  margin-bottom: 80px;
+}
+
+.black-content-3 h3 {
+  text-align: center;
+}
+
+.black-content-3 p {
+  font-size: 16px;
+  margin-bottom: 33px;
+}
+
+/* Text reveal animation keyframes for 'Happy' */
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Text fade-in animation keyframes for 'Birthday To You' and 'Simra' */
+@keyframes fadeInFromBottom {
+  from {
+    transform: translateY(50%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+
+/* Text roll animation keyframes for '17th' and 'Simra' */
+@keyframes roll {
+  0% {
+    transform: translateY(0) rotateY(0);
+  }
+  100% {
+    transform: translateY(0) rotateY(360deg);
+  }
+}
+
+@keyframes roll-1 {
+  0% {
+    transform: translateY(0) rotateY(0);
+  }
+  100% {
+    transform: translateY(0) rotateY(360deg);
+  }
+}
+
+.header-text .happy {
+  animation: slideInFromLeft 2s ease-in-out;
+}
+
+.header-text .seventeenth {
+  animation: roll-1 2s cubic-bezier(0.175, 0.885, 0.32, 1.275) 2s both,
+  slideInFromLeft 2s ease-in-out;
+}
+
+.header-text .birthday {
+  animation: fadeInFromBottom 2s ease-in-out;
+}
+
+.you {
+  animation: slideInFromRight 2s ease-in-out;
+}
+
+.header-text .person {
+  animation: roll 2s cubic-bezier(0.175, 0.885, 0.32, 1.275) 2s both,
+  slideInFromRight 2s ease-in-out;
+}
+
+.the {
+  animation: fadeInFromBottom 5s ease-in-out;
+}
+
+header {
+  margin: 0;
+  padding: 0;
+}
+
+/* Styling for the white header */
+
+.white-header {
+  position: relative;
+  background: url(images/wallhaven-4yjpod.jpg) no-repeat center center;
+  background-size: 1368px 600px;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 600px;
+  width: 100%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 0; /* Add z-index to ensure the header is behind the navigation bar */
+}
+
+
+.white-header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.6; /* Adjust the opacity of the black overlay as needed */
+  z-index: -1; /* Push the overlay behind the header text */
+}
+
+.header-text p {
+  font-family: Roboto;
+  font-weight: 700;
+  font-size: 55px;
+  display: inline-block;
+  white-space: nowrap;
+  margin: 0;
+  animation-fill-mode: both;
+}
+
+.header-text .the {
+  display: flex ;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  font-weight: 400;
+  font-size: 35px;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+nav{
+  display: flex;
+  height: 65px;
+  width: 100%;
+  background: #1b1b1b;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 18px 0 30px;
+  flex-wrap: wrap;
+  z-index: 2; /* Add z-index to make the navigation bar appear above other content */
+  position: fixed; /* Add position fixed to keep the navigation bar fixed at the top */
+  top: 0;
+  left: 0;
+  right: 0;
+  transition: height 0.3s ease;
+}
+
+nav .logo{
+  color: #fff;
+  font-size: 35px;
+  font-weight: 700;
+}
+nav ul{
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+nav ul li{
+  margin: 0 5px;
+}
+nav ul li a{
+  color: #f2f2f2;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 5px 12px;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+nav ul li a:hover{
+  color: #111;
+  background: #fff;
+}
+nav .menu-btn i{
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+  display: none;
+}
+input[type="checkbox"]{
+  display: none;
+}
+
+
+@media (max-width: 1000px){
+  nav{
+    padding: 0 30px 0 30px;
+  }
+}
+@media (max-width: 900px) {
+  nav .menu-btn i{
+    display: block;
+  }
+  #click:checked ~ .menu-btn i:before{
+    content: "\f00d";
+  }
+  nav ul{
+    position: fixed;
+    top: 80px;
+    left: -100%;
+    background: black;
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    display: block;
+    transition: all 0.3s ease;
+  }
+  #click:checked ~ ul{
+    left: 0;
+  }
+  nav ul li{
+    width: 100%;
+    margin: 40px 0;
+  }
+  nav ul li a{
+    width: 100%;
+    margin-left: -100%;
+    display: block;
+    font-size: 20px;
+    transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  #click:checked ~ ul li a{
+    margin-left: 0px;
+  }
+  nav ul li a.active,
+  nav ul li a:hover{
+    background: none;
+    color: cyan;
+  }
+}
+.content{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 100;
+  width: 100%;
+  padding: 0 30px;
+  color: #1b1b1b;
+}
+.content div{
+  font-size: 40px;
+  font-weight: 700;
+}
+
+body.nav-open .white-header {
+  z-index: 0;
+  filter: brightness(40%); /* Keep the reduced brightness when the navigation bar is open */
+}
+
+.top-bar.small {
+  height: 45px; /* Adjust the smaller height of the bar as needed */
+  transition: background-color 0.5s ease;
+}
+
+.top-bar.transparent {
+  background-color: transparent;
+  transition: background-color 0.5s ease; /* Add transition for smooth color change */
+}
+
+.top-bar {
+  background-color: black;
+}
+
+/* Make the header image responsive */
+@media (max-width: 768px) {
+  .white-header {
+    background-size: 1368px 500px;
+    height: 500px;
+    z-index: -5;
+  }
+}
+
+@media (max-width: 449px) {
+  .header-text p {
+    font-size: 22px;
+  }
+  .header-text .the {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 450px) and (max-width: 690px) {
+  .header-text p {
+    font-size: 30px;
+  }
+  .header-text .the {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 691px) and (max-width: 1000px) {
+  .header-text p {
+    font-size: 45px;
+  }
+  .header-text .the {
+    font-size: 25px;
+  }
+}
+
+/* Make the container full width on smaller screens */
+@media (max-width: 950px) {
+  .container {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column; /* On smaller screens, display the image and text below each other */
+    margin: 0 auto;
+    align-items: center;
+    text-align: center; 
+    max-width: 800px;
+  }
+  
+  .img {
+    height: 300px;
+    width: 430px;
+    margin: 80px 0 0 0; /* Adjust the margin as needed */
+  }
+
+  
+  .text-content {
+    flex: 1; /* Allow the text to take the remaining width in the container */
+    margin-bottom: 80px;
+  }
+  
+  /* Optional: Style the heading and paragraphs inside the container */
+  .container h3 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: 40px;
+    text-align: center;
+    padding-bottom: 40px;
+  }
+}
+
+/* Make the container full width on smaller screens */
+@media (max-width: 950px) {
+  .container-2 {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .container-2 {
+    display: flex;
+    flex-direction: column; /* On smaller screens, display the image and text below each other */
+    margin: 0 auto;
+    align-items: center;
+    text-align: center; 
+    max-width: 800px;
+  }
+  
+  .img-2 {
+    height: 300px;
+    width: 430px;
+    margin: 40px 0 80px 0; /* Adjust the margin as needed */
+  }
+
+  
+  .text-content-2 {
+    flex: 1; /* Allow the text to take the remaining width in the container */
+  }
+  
+  /* Optional: Style the heading and paragraphs inside the container */
+  .container-2 h3 {
+    font-size: 28px;
+    font-weight: 700;
+    padding-left: 0;
+    margin-top: 80px;
+    text-align: center;
+  }
+
+  .container-2 p {
+    margin-left: 0;
+  }  
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.footer {
+  font-family: Roboto,Arial;
+  padding: 20px;
+  text-align: center;
+  color: white;
+}
+.footer h2 {
+  margin-bottom: 10px;
+}
+.footer p {
+  margin: 0;
+}
+.footer-about, .footer-follow, .footer-contact {
+  display: inline-block;
+  width: 30%;
+  text-align: left;
+  padding: 10px;
+  vertical-align: top;
+}
+.footer-follow {
+  text-align: center;
+}
+
+.footer-social {
+  display: flex;
+  flex-direction: column; /* Display icons and names below each other */
+}
+
+.footer-social a {
+  text-decoration: none;
+  color: white;
+  position: relative;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.footer-social a:hover {
+  color: black;
+  background-color: white;
+  border-radius: 5px; /* Add a slight rounded border */
+  padding: 5px; /* Add some padding to make it look more prominent */
+}
+
+.footer-social i {
+  font-size: 20px;
+  padding-right: 5px;
+  vertical-align: middle; /* Align the icons vertically in the middle */
+}
+
+.footer-social span {
+  display: inline-block; /* Make the text inline with the icons */
+  vertical-align: middle; /* Align the text vertically in the middle */
+}
+
+.fa-instagram, .fa-facebook, .fa-instagram {
+  padding: 0 0 8px 0;
+}
+
+.footer-email input[type="email"] {
+  padding: 5px;
+  width: 70%;
+}
+.footer-email input[type="submit"] {
+  padding: 5px 10px;
+  background-color: #111;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.footer-email input[type="submit"]:hover {
+  background-color: white;
+  color: black;
+  border-radius: 5px;
+}
+
+.footer-copyright {
+  margin-top: 20px; /* Add some spacing between the content and copyright text */
+  font-size: 14px;
+}
+
+/* For screens larger than 768px (e.g., tablets and desktops) */
+@media (max-width: 769px) {
+  .footer-about {
+    width: 100%;
+    order: 1; /* Change the order to display 'About Us' section first on top */
+    text-align: center;
+  }
+
+  .footer-follow {
+    text-align: center;
+    width: 100%;
+    order: 2; /* Change the order to display 'Follow Us' section second */
+  }
+
+  .footer-contact {
+    width: 100%;
+    text-align: center;
+    order: 3; /* Change the order to display 'Contact Us' section third */
+  }
+}
+
+
+@media (max-width: 450px) {
+
+  .img, .img-2 {
+    height: 300px;
+    width: 360px;
+  }
+}
