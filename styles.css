@@ -629,4 +629,9 @@ html {
   .header-text .the {
     margin-top: 10px;
   }
+
+  .white-header {
+    background-size: 1368px 600px;
+    height: 600px;
+  }
 }
